@@ -1,0 +1,80 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-blue-500 flex justify-center items-center min-h-screen">
+    <section class="w-80">
+        <header class="h-32 bg-gradient-to-r from-blue-800 to-blue-600">
+            <div class="flex text-white justify-center px-2 py-5 relative">
+                <svg class="h-7 w-6 absolute left-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+                    className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                </svg>
+                <p class="text-lg justify-self-center">Find Friends</p>
+            </div>
+            <div class="flex w-70 bg-blue-500 h-10 items-center mx-5 rounded-3xl px-3">
+                <svg class="w-6 h-6 text-blue-200" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+                    className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round"
+                        d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                </svg>
+                <input placeholder="Enter a friends name" class="bg-inherit placeholder:text-blue-200 px-2 pb-1 text-sm focus:outline-0"/>
+            </div>
+        </header>
+        <section class="bg-blue-200 py-4 px-5 pb-0">
+            <div class="flex justify-between items-center pb-4">
+                <div class="flex items-center">
+                    <div class="bg-slate-300 rounded-full border-4 border-blue-300"><img class="h-12 w-12 rounded-full" src="https://gravatar.com/avatar/da6c44b00379b48feb015d41a898cb4f?s=400&d=robohash&r=x"/></div>
+                    <p class="font-bold text-sky-900 pl-2 text-sm">Jason Graham</p>
+                </div>
+                <button class="h-9 w-20 bg-gradient-to-r from-blue-800 to-blue-600 rounded-3xl text-xs text-white font-bold shadow-xl shadow-blue-300">Follow</button>
+            </div>
+            <div class="flex justify-between items-center pb-4">
+                <div class="flex items-center">
+                    <div class="bg-slate-300 rounded-full border-4 border-blue-300"><img class="h-12 w-12 rounded-full" src="https://gravatar.com/avatar/e39421ade9553eca57c8c3266f7578e3?s=400&d=robohash&r=x"/>
+                    </div>
+                    <p class="font-bold text-sky-900 pl-2 text-sm">Ophelia Gaddy</p>
+                </div>
+                <button class="h-9 w-20 bg-gradient-to-r from-blue-300 to-blue-200 rounded-3xl text-xs text-blue-800 font-bold shadow-xl shadow-blue-300 border border-blue-600" onclick="handleUnfollow()" id="unfollow">Unfollow</button>
+                <button class="h-9 w-20 bg-gradient-to-r from-blue-800 to-blue-600 rounded-3xl text-xs text-white font-bold shadow-xl shadow-blue-300 hidden" onclick="handleFollow()" id="follow">Follow</button>
+            </div>
+            <div class="flex justify-between items-center pb-4">
+                <div class="flex items-center">
+                    <div class="bg-slate-300 rounded-full border-4 border-blue-300"><img class="h-12 w-12 rounded-full" src="https://gravatar.com/avatar/bbcf2535b206a7b0a02034edda2b2523?s=400&d=robohash&r=x"/>
+                    </div>
+                    <p class="font-bold text-sky-900 pl-2 text-sm">Lillian Whitmire</p>
+                </div>
+                <button class="h-9 w-20 bg-gradient-to-r from-blue-800 to-blue-600 rounded-3xl text-xs text-white font-bold shadow-xl shadow-blue-300">Follow</button>
+            </div>
+            <div class="flex justify-between items-center pb-4">
+                <div class="flex items-center">
+                    <div class="bg-slate-300 rounded-full border-4 border-blue-300"><img class="h-12 w-12 rounded-full" src="https://gravatar.com/avatar/b074ab9ed9815dd593c0cf1112bac7be?s=400&d=robohash&r=x"/>
+                    </div>
+                    <p class="font-bold text-sky-900 pl-2 text-sm">Joseph Shepherd</p>
+                </div>
+                <button class="h-9 w-20 bg-gradient-to-r from-blue-800 to-blue-600 rounded-3xl text-xs text-white font-bold shadow-xl shadow-blue-300">Follow</button>
+            </div>
+            <div class="flex justify-between items-center pb-4">
+                <div class="flex items-center">
+                    <div class="bg-slate-300 rounded-full border-4 border-blue-300"><img class="h-12 w-12 rounded-full" src="https://gravatar.com/avatar/579b225d83733236b0090e7c1d528c8b?s=400&d=robohash&r=x"/>
+                    </div>
+                    <p class="font-bold text-sky-900 pl-2 text-sm">Alex R. Prowell</p>
+                </div>
+                <button class="h-9 w-20 bg-gradient-to-r from-blue-800 to-blue-600 rounded-3xl text-xs text-white font-bold shadow-xl shadow-blue-300">Follow</button>
+            </div>
+        </section>
+    </section>
+
+    <script>
+        function handleFollow() {
+            document.getElementById("follow").innerHTML = 'Unfollow';
+        }
+    </script>
+</body>
+
+</html>

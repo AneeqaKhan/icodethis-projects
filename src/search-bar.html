@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-stone-600 to-neutral-800 flex flex-col justify-center items-center min-h-screen">
+    <section>
+        <div class="flex flex-row items-center">
+            <input placeholder="Enter your search here" class="w-96 h-16 px-6 bg-gray-600 rounded-l placeholder:text-slate-400 focus:outline-0 text-lg"/>
+            <div class="relative z-10 right-[15px] rounded-full bg-gray-600 p-3 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 hover:bg-gray-600 hover:text-pink-300 hover:border-pink-300 duration-300 hover:bg-neutral-800">
+                <div class="ring ring-neutral-800 rounded-full border-4 border-neutral-800">
+                    <button class="h-20 w-20 rounded-full border-8 border-pink-500 text-pink-500 text-2xl font-semibold bg-neutral-800">GO</button>
+                </div>
+            </div>
+        </div>
+        <button class="self-auto flex items-center text-pink-500 mt-[-18px]">
+            <p class="pl-5 pr-1">Filters</p>
+            <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
+                className="w-6 h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+            </svg>
+        </button>
+    </section>
+</body>
+
+</html>
