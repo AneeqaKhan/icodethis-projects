@@ -6,7 +6,6 @@
 
 
 
-<!-- ABOUT THIS PROJECT
 ## About
 
 This repo is compilation of all the daily coding projects I have done on [codethis](https://www.icodethis.com/AneeqaKhan)
