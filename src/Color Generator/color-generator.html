@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gradient-to-br from-stone-200 to-gray-200 flex justify-center items-center min-h-screen">
+    <section class="flex flex-col justify-center items-center pt-20 pb-5">
+        <p class="text-lg font-semibold">Color palette generator</p>
+        <div class="flex gap-4 py-10 flex-col lg:flex-row md:flex-row sm:flex-row">
+            <div class="w-32 h-48 bg-white rounded-lg flex flex-col p-1.5 items-center hover:drop-shadow-xl transition ease-in-out delay-75 hover:-translate-y-2 hover:scale-110 duration-150 cursor-crosshair" onclick="copyColorCode('#A69F88')">
+                <div class="w-full h-full bg-[#A69F88] rounded mb-1"></div>
+                <p class="text-xs font-semibold my-2">#A69F88</p>
+            </div>
+
+            <div class="w-32 h-48 bg-white rounded-lg flex flex-col p-1.5 items-center hover:drop-shadow-xl transition ease-in-out delay-75 hover:-translate-y-2 hover:scale-110 duration-150 cursor-crosshair" onclick="copyColorCode('#C3C1AB')">
+                <div class="w-full h-full bg-[#C3C1AB] rounded mb-1"></div>
+                <p class="text-xs font-semibold my-2">#C3C1AB</p>
+            </div>
+
+            <div class="w-32 h-48 bg-white rounded-lg flex flex-col p-1.5 items-center hover:drop-shadow-xl transition ease-in-out delay-75 hover:-translate-y-2 hover:scale-110 duration-150 cursor-crosshair" onclick="copyColorCode('#F0DED0')">
+                <div class="w-full h-full bg-[#F0DED0] rounded mb-1"></div>
+                <p class="text-xs font-semibold my-2">#F0DED0</p>
+            </div>
+
+            <div class="w-32 h-48 bg-white rounded-lg flex flex-col p-1.5 items-center hover:drop-shadow-xl transition ease-in-out delay-75 hover:-translate-y-2 hover:scale-110 duration-150 cursor-crosshair" onclick="copyColorCode('#D9BFB1')" >
+                <div class="w-full h-full bg-[#D9BFB1] rounded mb-1"></div>
+                <p class="text-xs font-semibold my-2">#D9BFB1</p>
+            </div>
+
+            <div class="w-32 h-48 bg-white rounded-lg flex flex-col p-1.5 items-center hover:drop-shadow-xl transition ease-in-out delay-75 hover:-translate-y-2 hover:scale-110 duration-150 cursor-crosshair" onclick="copyColorCode('#AD7D81')">
+                <div class="w-full h-full bg-[#AD7D81] rounded mb-1"></div>
+                <p class="text-xs font-semibold my-2">#AD7D81</p>
+            </div>        
+        </div>
+        <div class="flex flex-col items-center mt-12">
+            <a class="px-20 py-3 rounded-lg font-semibold text-center text-white transition duration-300 rounded-lg hover:from-[#A69F88] hover:to-[#AD7D81] ease bg-gradient-to-br from-[#B29780] to-[#A69F88] my-3 cursor-pointer">
+                Generate palette
+            </a>
+            <p class="text-xs text-amber-900 text-center">Or just press the "Spacebar" to generate new palettes.
+        </div>
+
+        <div class="text-xs bg-white py-1 px-3 rounded-full my-10 text-center">
+            <p>Click to copy individual color <span>.</span>
+            Press "C" to copy palette
+        </div>
+
+        <div id="snackbar"></div>
+    </section>
+
+    <script>
+        function copyColorCode(param) {
+            var x = document.getElementById("snackbar");
+            const node = document.createTextNode(`Color ${param} copied to your clipboard`); 
+            x.innerHTML = "";
+            x.appendChild(node);
+            x.className = "show";
+            setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+        }
+    </script>
+</body>
+
+</html>
